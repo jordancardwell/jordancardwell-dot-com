@@ -10,9 +10,14 @@ const store = configureStore(window.__PRELOADED_STATE__);
 
 render(
   <Router>
-    <Provider store={store}>
+    {
+      // TODO: REDUX STORE
+      // <Provider store={store}>
+    }
       <App />
-    </Provider>
+    {
+      // </Provider>
+    }
   </Router>,
   document.getElementById('root'),
 );

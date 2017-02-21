@@ -14,9 +14,14 @@ export default function render(req, res) {
 
   const html = renderToString(
     <StaticRouter location={req.url} context={context}>
-      <Provider store={store}>
-        <App />
-      </Provider>
+      {
+        // TODO: REDUX STORE
+        // <Provider store={store}>
+      }
+      <App />
+      {
+        // </Provider>
+      }
     </StaticRouter>,
   );
 
@@ -35,8 +40,10 @@ export default function render(req, res) {
         <head>
           <meta charSet="utf-8" />
           <meta content="width=device-width, initial-scale=1" name="viewport" />
-          <title>React Starter</title>
-          <style>${css}</style>
+          <link rel="stylesheet" href="https://unpkg.com/basscss@8.0.2/css/basscss.min.css" />
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" />
+          <title>Jordan Cardwell</title>
+          <style type="text/css">${css}</style>
         </head>
         <body>
           <div id="root">${html}</div>
